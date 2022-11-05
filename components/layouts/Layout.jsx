@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Navbar } from "../ui";
 import { Nav2 } from "../ui/nav";
 
 export const Layout = ({ children, title }) => {
@@ -14,7 +13,6 @@ export const Layout = ({ children, title }) => {
         />
       </Head>
 
-      {/* <Navbar /> */}
       <Nav2 />
 
       <main>{children}</main>

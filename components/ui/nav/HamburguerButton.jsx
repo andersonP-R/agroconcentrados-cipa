@@ -1,8 +1,17 @@
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 export const HamburguerButton = ({ open, handleOpen }) => {
+  const [bgNav, setBgNav] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.pageYOffset > 50 ? setBgNav(true) : setBgNav(false);
+    });
+  }, []);
+
   return (
-    <Burguer>
+    <Burguer bg={bgNav}>
       <div
         onClick={handleOpen}
         className={`icon nav-icon-5 ${open ? "open" : ""}`}
@@ -25,13 +34,13 @@ const Burguer = styled.div`
     display: inline-block;
   }
   .nav-icon-5 span {
-    background-color: #fff;
+    background-color: ${({ bg }) => (bg ? "#000" : "#fff")};
     position: absolute;
     border-radius: 2px;
     transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
     width: 100%;
     height: 3px;
-    transition-duration: 500ms;
+    transition-duration: 300ms;
   }
   .nav-icon-5 span:nth-child(1) {
     top: 0px;
@@ -50,6 +59,7 @@ const Burguer = styled.div`
   .nav-icon-5.open span:nth-child(1) {
     transform: rotate(45deg);
     top: 13px;
+    background-color: #fb2020;
   }
   .nav-icon-5.open span:nth-child(2) {
     opacity: 0;
@@ -57,5 +67,6 @@ const Burguer = styled.div`
   .nav-icon-5.open span:nth-child(3) {
     transform: rotate(-45deg);
     top: 13px;
+    background-color: #fb2020;
   }
 `;
