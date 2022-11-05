@@ -1,7 +1,7 @@
 import { Layout } from "../components/layouts";
 
-const contacto = () => {
+const ContactoPage = () => {
   return <Layout>contacto</Layout>;
 };
 
-export default contacto;
+export default ContactoPage;
