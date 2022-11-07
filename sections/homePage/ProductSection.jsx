@@ -3,6 +3,7 @@ import Link from "next/link";
 import styled from "styled-components";
 
 import vector from "../../public/img/Vector1.png";
+import { Container } from "../../styles/GlobalStyles";
 
 const productItems = [
   {
@@ -29,8 +30,8 @@ const productItems = [
 
 export const ProductSection = () => {
   return (
-    <SectionContainer>
-      <div className="wrapper">
+    <Container>
+      <Wrapper>
         <h1 className="title">Nuestros productos</h1>
         <p className="description">
           CIPA Agroconcentrados ofrece concentrados para pollos, cerdos y
@@ -58,138 +59,121 @@ export const ProductSection = () => {
           ))}
         </div>
         <span className="mask-img">
-          <Image
-            src={vector}
-            // width={1400}
-            // height={800}
-            layout="fill"
-            alt="vector-1"
-            className="img"
-          />
+          <Image src={vector} layout="fill" alt="vector-1" className="img" />
         </span>
-      </div>
-    </SectionContainer>
+      </Wrapper>
+    </Container>
   );
 };
 
-const SectionContainer = styled.section`
-  position: relative;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
-  min-height: 100vh;
-  height: auto;
-  padding: 25px 25px;
-  /* border: 1px solid red; */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
 
-  @media screen and (min-width: 830px) {
-    padding: 0px 100px;
+  .title {
+    color: #000;
+    text-align: center;
+    font-size: clamp(32px, 5vw, 42px);
+    line-height: 40px;
+    margin-bottom: 15px;
+
+    @media screen and (min-width: 830px) {
+      margin-bottom: 30px;
+    }
   }
 
-  .wrapper {
+  .description {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 830px) {
+      width: 70%;
+      margin-bottom: 80px;
+    }
+  }
+
+  .product-cards {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: center;
 
-    .title {
-      color: #000;
-      text-align: center;
-      font-size: clamp(32px, 5vw, 42px);
-      line-height: 40px;
-      margin-bottom: 15px;
-
-      @media screen and (min-width: 830px) {
-        margin-bottom: 30px;
-      }
+    @media screen and (min-width: 830px) {
+      flex-wrap: nowrap;
     }
 
-    .description {
-      display: block;
-      width: 100%;
-      margin: 0 auto;
-      line-height: 30px;
-      text-align: center;
-      font-size: 18px;
-      color: #000;
-      margin-bottom: 60px;
-
-      @media screen and (min-width: 830px) {
-        width: 70%;
-        margin-bottom: 80px;
-      }
-    }
-
-    .product-cards {
+    .item {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
       width: 100%;
-      justify-content: center;
+      gap: 50px;
+      margin: 0px 20px;
+      margin-bottom: 80px;
+      color: #000;
+      /* border: 1px solid red; */
 
-      @media screen and (min-width: 830px) {
-        flex-wrap: nowrap;
+      .item-title {
+        font-weight: bold;
+        font-size: 24px;
       }
 
-      .item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        gap: 50px;
-        margin: 0px 20px;
-        margin-bottom: 80px;
+      .item-description {
+        font-size: 18px;
+        line-height: 30px;
+      }
+
+      .item-link {
+        display: block;
+        font-size: 18px;
+        padding: 15px;
+        border: 1px solid #000;
         color: #000;
-        /* border: 1px solid red; */
+        text-decoration: none;
+        border-radius: 30px;
 
-        .item-title {
-          font-weight: bold;
-          font-size: 24px;
-        }
-
-        .item-description {
-          font-size: 18px;
-          line-height: 30px;
-        }
-
-        .item-link {
-          display: block;
-          font-size: 18px;
-          padding: 15px;
-          border: 1px solid #000;
-          color: #000;
-          text-decoration: none;
-          border-radius: 30px;
-
-          &:hover {
-            border-color: #0073bd;
-            color: #0073bd;
-          }
+        &:hover {
+          border-color: #0073bd;
+          color: #0073bd;
         }
       }
     }
+  }
 
-    .mask-img {
-      position: absolute;
+  .mask-img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 450px;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+
+    @media screen and (min-width: 830px) {
       width: 100%;
-      height: auto;
-      top: 450px;
-      left: 0;
-      z-index: -1;
-      overflow: hidden;
+      height: 500px;
+      top: 400px;
+    }
+
+    .img {
+      width: 100%;
+      height: 300px;
 
       @media screen and (min-width: 830px) {
         width: 100%;
-        height: 500px;
-        top: 400px;
-      }
-
-      .img {
-        width: 100%;
-        height: 300px;
-
-        @media screen and (min-width: 830px) {
-          width: 100%;
-          height: 100%;
-        }
+        height: 100%;
       }
     }
   }
