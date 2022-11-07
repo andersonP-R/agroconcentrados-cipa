@@ -3,6 +3,8 @@ import styles from "./Slideshow.module.css";
 
 import "react-slideshow-image/dist/styles.css";
 import styled from "styled-components";
+import Image from "next/image";
+import wave from "../../public/img/wave.png";
 
 const images = [
   {
@@ -82,17 +84,16 @@ export const SlideShow = () => {
       </Fade>
 
       {/* mask */}
-      <svg
-        className="wave"
-        viewBox="0 0 1440 195"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M268.047 110.547C85.3123 110.547 -14 146.017 -14 214L1451 212.818V0C1451 88.0829 1256.88 110.547 1055.37 110.547H268.047Z"
-          fill="#fff"
+      <span className="mask-img">
+        <Image
+          src={wave}
+          // width={1400}
+          // height={800}
+          layout="fill"
+          alt="wave-1"
+          className="img"
         />
-      </svg>
+      </span>
     </SlideContainer>
   );
 };
@@ -101,20 +102,26 @@ const SlideContainer = styled.div`
   position: relative;
   overflow: hidden;
 
-  .wave {
-    width: 1440px;
-    height: 195px;
+  .mask-img {
     position: absolute;
-    bottom: 0;
+    width: 100%;
+    height: auto;
+    bottom: -10px;
     z-index: 5;
+    overflow: hidden;
 
-    @media screen and (max-width: 450px) {
+    @media screen and (min-width: 575px) {
       width: 100%;
-      bottom: -75px;
+      height: auto;
     }
 
-    @media screen and (max-width: 300px) {
-      bottom: -85px;
+    .img {
+      width: 100%;
+      height: 100px;
+
+      @media screen and (min-width: 575px) {
+        height: 150px;
+      }
     }
   }
 `;
