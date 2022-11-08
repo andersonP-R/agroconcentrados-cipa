@@ -2,7 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
 
-import vector from "../../public/img/Vector1.png";
+import orangeWave from "../../public/img/orange-wave.png";
+import redWave from "../../public/img/red-wave.png";
+
 import { Container } from "../../styles/GlobalStyles";
 
 const productItems = [
@@ -59,7 +61,15 @@ export const ProductSection = () => {
           ))}
         </div>
         <span className="mask-img">
-          <Image src={vector} layout="fill" alt="vector-1" className="img" />
+          <Image
+            src={orangeWave}
+            layout="fill"
+            alt="vector-1"
+            className="img"
+          />
+        </span>
+        <span className="mask-img-2">
+          <Image src={redWave} layout="fill" alt="vector-2" className="img" />
         </span>
       </Wrapper>
     </Container>
@@ -123,7 +133,6 @@ const Wrapper = styled.div`
       margin: 0px 20px;
       margin-bottom: 80px;
       color: #000;
-      /* border: 1px solid red; */
 
       .item-title {
         font-weight: bold;
@@ -163,8 +172,8 @@ const Wrapper = styled.div`
 
     @media screen and (min-width: 830px) {
       width: 100%;
-      height: 500px;
-      top: 400px;
+      height: 600px;
+      top: 300px;
     }
 
     .img {
@@ -175,6 +184,26 @@ const Wrapper = styled.div`
         width: 100%;
         height: 100%;
       }
+    }
+  }
+
+  .mask-img-2 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: auto;
+    bottom: 200px;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+
+    @media screen and (min-width: 830px) {
+      display: none;
+    }
+
+    .img {
+      width: 100%;
+      height: 300px;
     }
   }
 `;
