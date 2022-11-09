@@ -1,5 +1,11 @@
 import { Layout } from "../components/layouts";
-import { CotizacionSection, Hero, ProductSection } from "../sections/homePage";
+import {
+  CategoriasSection,
+  CotizacionSection,
+  Hero,
+  ProductSection,
+  ResultadosGarantizadosSection,
+} from "../sections/homePage";
 
 const HomePage = () => {
   return (
@@ -7,6 +13,8 @@ const HomePage = () => {
       <Hero />
       <ProductSection />
       <CotizacionSection />
+      <ResultadosGarantizadosSection />
+      <CategoriasSection />
     </Layout>
   );
 };
