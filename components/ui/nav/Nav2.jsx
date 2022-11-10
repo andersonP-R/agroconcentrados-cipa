@@ -45,7 +45,14 @@ const NavContainer = styled.header`
   width: 100%;
   height: 80px;
   transition: 0.3s all ease;
-  background-color: ${({ bg }) => (bg ? "#fff" : "transparent")};
+  background: ${({ bg }) =>
+    bg ? "rgba( 255, 255, 255, 0.50 )" : "transparent"};
+  box-shadow: ${({ bg }) =>
+    bg ? "0 8px 32px 0 rgba( 31, 38, 135, 0.30 )" : "transparent"};
+  backdrop-filter: ${({ bg }) => (bg ? " blur( 15px )" : "transparent")};
+  -webkit-backdrop-filter: ${({ bg }) =>
+    bg ? " blur( 15px )" : "transparent"};
+
   z-index: 10;
 `;
 

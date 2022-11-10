@@ -9,14 +9,12 @@ import wave from "../../public/img/wave.png";
 const images = [
   {
     id: 1,
-    picture:
-      "https://actualidadganadera.com/wp-content/uploads/2019/10/GANADO-CAMPECHE.jpg",
+    picture: "/img/gallina-3.jpg",
     alt: "imagen1",
   },
   {
     id: 2,
-    picture:
-      "https://agrotendencia.tv/agropedia/wp-content/uploads/2019/02/pollosengorde1.jpg",
+    picture: "/img/pastoreo-3.jpg",
     alt: "imagen2",
   },
 ];

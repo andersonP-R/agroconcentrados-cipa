@@ -4,6 +4,7 @@ import {
   CotizacionSection,
   Hero,
   ProductSection,
+  QuoteSection,
   ResultadosGarantizadosSection,
 } from "../sections/homePage";
 
@@ -15,6 +16,7 @@ const HomePage = () => {
       <CotizacionSection />
       <ResultadosGarantizadosSection />
       <CategoriasSection />
+      <QuoteSection />
     </Layout>
   );
 };

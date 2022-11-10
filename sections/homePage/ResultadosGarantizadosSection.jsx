@@ -73,6 +73,7 @@ const Wrapper = styled.div`
     width: 100%;
     height: auto;
     margin-bottom: 100px;
+    overflow: hidden;
 
     .box-1__description,
     .box-2__description {

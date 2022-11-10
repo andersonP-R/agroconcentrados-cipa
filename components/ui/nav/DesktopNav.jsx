@@ -15,6 +15,11 @@ export const DesktopNav = () => {
   return (
     <Container scroll={bgNav}>
       <li className="nav-item">
+        <Link href="/" className="link">
+          Inicio
+        </Link>
+      </li>
+      <li className="nav-item">
         <Link href="/productos" className="link">
           Productos
         </Link>
@@ -45,11 +50,20 @@ const Container = styled.ul`
     .link {
       color: ${({ scroll }) => (scroll ? "#000" : "#fff")};
       text-decoration: none;
-      transition: 0.3s color ease;
+      padding: 10px;
+    }
 
-      &:hover {
-        color: #0073bd;
-      }
+    .link {
+      background: linear-gradient(to right, #000000, #000000),
+        linear-gradient(to right, #fff, #0073bd, #54a9dd);
+      background-size: 0% 3px, 0 3px;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size 400ms;
+    }
+
+    .link:hover {
+      background-size: 0 3px, 100% 3px;
     }
   }
 `;
