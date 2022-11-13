@@ -48,7 +48,7 @@ const NavContainer = styled.header`
   background: ${({ bg }) =>
     bg ? "rgba( 255, 255, 255, 0.50 )" : "transparent"};
   box-shadow: ${({ bg }) =>
-    bg ? "0 8px 32px 0 rgba( 31, 38, 135, 0.30 )" : "transparent"};
+    bg ? "0 5px 15px 0 rgba( 31, 38, 135, 0.30 )" : "transparent"};
   backdrop-filter: ${({ bg }) => (bg ? " blur( 15px )" : "transparent")};
   -webkit-backdrop-filter: ${({ bg }) =>
     bg ? " blur( 15px )" : "transparent"};
