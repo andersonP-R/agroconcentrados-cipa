@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
+import { PrimaryButton } from "../../components/ui";
 
 import orangeWave from "../../public/img/orange-wave.png";
 import redWave from "../../public/img/red-wave.png";
@@ -54,9 +55,7 @@ export const ProductSection = () => {
                 />
               </div>
               <div className="item-description">{item.description}</div>
-              <Link href="/productos" className="item-link">
-                Ir a productos
-              </Link>
+              <PrimaryButton href="/productos">Ir a productos</PrimaryButton>
             </div>
           ))}
         </div>
@@ -129,34 +128,19 @@ const Wrapper = styled.div`
       align-items: center;
       text-align: center;
       width: 100%;
-      gap: 50px;
+      gap: 30px;
       margin: 0px 20px;
       margin-bottom: 80px;
       color: #000;
 
       .item-title {
         font-weight: bold;
-        font-size: 24px;
+        font-size: 25px;
       }
 
       .item-description {
         font-size: 18px;
         line-height: 30px;
-      }
-
-      .item-link {
-        display: block;
-        font-size: 18px;
-        padding: 15px;
-        border: 1px solid #000;
-        color: #000;
-        text-decoration: none;
-        border-radius: 30px;
-
-        &:hover {
-          border-color: #0073bd;
-          color: #0073bd;
-        }
       }
     }
   }

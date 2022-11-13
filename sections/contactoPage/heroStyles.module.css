@@ -1,0 +1,38 @@
+.heroContainer {
+  position: relative;
+  background-image: url("../../public/img/gallinas.jpg");
+  background-position: top;
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 200px;
+  gap: 15px;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #fff;
+}
+
+@media screen and (min-width: 830px) {
+  .box {
+    width: 500px;
+    height: 200px;
+  }
+}
