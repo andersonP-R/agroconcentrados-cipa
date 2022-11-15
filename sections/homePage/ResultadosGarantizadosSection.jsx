@@ -31,7 +31,6 @@ export const ResultadosGarantizadosSection = () => {
               className="img-2"
             />
           </div>
-          {/*  */}
           <span className="mask-img">
             <Image src={redWave} layout="fill" alt="vector-2" className="img" />
           </span>

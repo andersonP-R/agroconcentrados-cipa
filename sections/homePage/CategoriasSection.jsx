@@ -8,26 +8,25 @@ const categorias = [
     id: 1,
     title: "Avicultura",
     img: "chiken.png",
+    url: "avicultura",
   },
   {
     id: 2,
     title: "Porcicultura",
     img: "chiken.png",
+    url: "porcicultura",
   },
   {
     id: 3,
     title: "Ganaderia",
     img: "chiken.png",
+    url: "ganaderia",
   },
   {
     id: 4,
     title: "Especies menores",
     img: "chiken.png",
-  },
-  {
-    id: 5,
-    title: "Domesticos",
-    img: "chiken.png",
+    url: "especies-menores",
   },
 ];
 
@@ -46,7 +45,9 @@ export const CategoriasSection = () => {
                 alt={categoria.title}
               />
               <h3 className="card-title">{categoria.title}</h3>
-              <PrimaryButton href={"/productos"}>Ver más</PrimaryButton>
+              <PrimaryButton href={`/categorias-de-productos/${categoria.url}`}>
+                Ver más
+              </PrimaryButton>
             </div>
           ))}
         </div>

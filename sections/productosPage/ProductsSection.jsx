@@ -14,11 +14,11 @@ export const categorias = [
   },
   {
     id: 2,
-    title: "Porcinos",
+    title: "Porcicultura",
     image: "chiken.png",
     description:
       "Esta es la descripción de la pagina para porcinos. El link de abajo te lleva a su respectiva page. Esta es la descripción de la pagina para ganaderia.",
-    url: "porcinos",
+    url: "porcicultura",
   },
   {
     id: 3,
