@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Container } from "../../styles/GlobalStyles";
 import { FaPhoneAlt, FaLocationArrow, FaRegClock } from "react-icons/fa";
+import Link from "next/link";
 
 const horarios = [
   {
@@ -43,9 +44,9 @@ export const ContactSection = () => {
           <div className="contacto">
             <h3 className="contacto-title">Contacto</h3>
             <span>355 4487 4512</span>
-            <a href="tel:4445 887 4556" itemProp="telephone">
-              Llamanos
-            </a>
+            <Link href="tel:4445 887 4556" itemProp="telephone" legacyBehavior>
+              <a>Llamanos</a>
+            </Link>
 
             <span className="contacto-icon">
               <FaPhoneAlt />
@@ -58,13 +59,13 @@ export const ContactSection = () => {
             <span>Calle 5a #2 47</span>
             <span>La Plata - Huila Colombia</span>
 
-            <a
-              href="https://www.google.com/maps/dir//Agroconcentrados+Cipa/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e3ad32716c2efd5:0x6e861e2adb580de8!2m2!1d-75.8900123!2d2.3891445"
+            <Link
+              href="https://www.google.com/maps/dir/Agroconcentrados+Cipa/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e3ad32716c2efd5:0x6e861e2adb580de8!2m2!1d-75.8900123!2d2.3891445"
               target="_blank"
-              rel="noreferrer"
+              legacyBehavior
             >
-              Cómo llegar
-            </a>
+              <a>Cómo llegar</a>
+            </Link>
 
             <span className="direccion-icon">
               <FaLocationArrow />

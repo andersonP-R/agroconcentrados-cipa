@@ -15,15 +15,10 @@ export const Nav2 = () => {
     });
   }, []);
 
-  const reloadPage = (e) => {
-    e.preventDefault();
-    location.reload();
-  };
-
   return (
     <NavContainer bg={bgNav}>
       <Wrapper>
-        <Link href="/" onClick={reloadPage}>
+        <Link href="/">
           <Image src="/img/logoCIPA.png" alt="logo" width={60} height={60} />
         </Link>
 

@@ -14,12 +14,20 @@ export const Footer = () => {
             novedades.
           </p>
           <div className="redes">
-            <a href="#" target="_blank" rel="noreferrer">
-              <FaFacebook />
-            </a>
-            <a href="#" target="_blank" rel="noreferrer">
-              <FaInstagram />
-            </a>
+            <Link
+              href="https://www.facebook.com/people/Agroconcentrados-Cipa/100067381966824/"
+              target="_blank"
+              legacyBehavior
+            >
+              <a>
+                <FaFacebook />
+              </a>
+            </Link>
+            <Link href="#" target="_blank" legacyBehavior>
+              <a>
+                <FaInstagram />
+              </a>
+            </Link>
           </div>
         </div>
         <div className="footer-section-2">

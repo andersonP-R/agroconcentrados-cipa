@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { PrimaryButton } from "../../components/ui";
 import { Container } from "../../styles/GlobalStyles";
 
-export const categorias = [
+const categorias = [
   {
     id: 1,
     title: "Ganaderia",
@@ -62,7 +62,7 @@ export const ProductsSection = () => {
                     {categoria.description}
                   </p>
                   <PrimaryButton
-                    href={`/categorias-de-productos/${categoria.url}`}
+                    href={`/categorias/${encodeURIComponent(categoria.url)}`}
                   >
                     Ver más
                   </PrimaryButton>

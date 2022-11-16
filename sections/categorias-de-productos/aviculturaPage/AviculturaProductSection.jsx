@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { CategoriaCard } from "../../../components/ui";
 import { Container } from "../../../styles/GlobalStyles";
 
-export const subCategoria = [
+const subCategoria = [
   {
     id: 1,
     title: "Pollitas Iniciación",

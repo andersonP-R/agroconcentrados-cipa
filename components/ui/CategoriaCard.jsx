@@ -20,7 +20,7 @@ export const CategoriaCard = ({ categorias }) => {
               </div>
               <div className="info-box">
                 <p className="info-box__description">{categoria.description}</p>
-                <PrimaryButton href={`/contanto`}>LLamar</PrimaryButton>
+                <PrimaryButton href="/contanto">LLamar</PrimaryButton>
               </div>
             </div>
           </div>

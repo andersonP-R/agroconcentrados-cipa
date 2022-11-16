@@ -45,7 +45,9 @@ export const CategoriasSection = () => {
                 alt={categoria.title}
               />
               <h3 className="card-title">{categoria.title}</h3>
-              <PrimaryButton href={`/categorias-de-productos/${categoria.url}`}>
+              <PrimaryButton
+                href={`/categorias/${encodeURIComponent(categoria.url)}`}
+              >
                 Ver más
               </PrimaryButton>
             </div>
