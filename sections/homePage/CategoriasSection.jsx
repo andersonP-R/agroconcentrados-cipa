@@ -6,20 +6,20 @@ import greenWave from "../../public/img/green-wave.png";
 const categorias = [
   {
     id: 1,
-    title: "Avicultura",
-    img: "chiken.png",
-    url: "avicultura",
+    title: "Porcicultura",
+    img: "cerdo-boceto.jpg",
+    url: "porcicultura",
   },
   {
     id: 2,
-    title: "Porcicultura",
-    img: "chiken.png",
-    url: "porcicultura",
+    title: "Avicultura",
+    img: "gallina-boceto2.jpg",
+    url: "avicultura",
   },
   {
     id: 3,
     title: "Ganaderia",
-    img: "chiken.png",
+    img: "toro-boceto.jpg",
     url: "ganaderia",
   },
   {
@@ -88,6 +88,9 @@ const Wrapper = styled.div`
     text-align: center;
     font-size: clamp(32px, 5vw, 42px);
     margin-bottom: 15px;
+    @media screen and (min-width: 1100px) {
+      margin-bottom: 40px;
+    }
   }
 
   .categories {
@@ -114,6 +117,8 @@ const Wrapper = styled.div`
       text-align: center;
       scroll-snap-align: center;
       border: 1px solid #000;
+      background-color: #fff;
+
       border-radius: 10px;
 
       .card-title {
